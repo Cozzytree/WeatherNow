@@ -12,6 +12,7 @@ element.weatherContents.insertAdjacentHTML("afterbegin", spinner);
 const renderCurrentWeather = async function () {
   try {
     await model.API_Call();
+    console.log(model.State);
 
     const html = `
             <div class="weather--image">
@@ -77,8 +78,11 @@ const renderCurrentWeather = async function () {
     toggleTemperature("F", "F", "C");
     toggleTemperature("C", "C", "F");
   } catch (err) {
-    console.error(err.message);
-    element.weatherContents.textContent = `${err}`;
+    element.container.innerHTML = "";
+    element.container.insertAdjacentHTML(
+      "afterbegin",
+      element.errorWindow(err.message)
+    );
   }
 };
 
@@ -97,6 +101,7 @@ const toggleTemperature = function (Btn, appear, hide) {
 const renderForecast = async function () {
   await model.API_Call();
   const Forecasts = await model.State.weatherData.forecast.forecastday;
+  // console.log(Forecasts);
 
   Forecasts.map((e, i) => {
     const html = `

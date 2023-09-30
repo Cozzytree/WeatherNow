@@ -1,6 +1,7 @@
 export const weatherContents = document.querySelector(".weather");
 export const weatherForecast = document.querySelector(".weather--forecast");
 export const ChartElement = document.querySelectorAll(".charts");
+export const container = document.querySelector(".container");
 
 export const Charts = function (yAxis, xAxis, id) {
   const options = {
@@ -34,4 +35,11 @@ export const Charts = function (yAxis, xAxis, id) {
   const chart = new ApexCharts(document.querySelector(id), options);
 
   chart.render();
+};
+
+export const errorWindow = function (err) {
+  return ` 
+      <div class="error--window">
+          <h6>${err}</h6>
+      </div>`;
 };

@@ -10,6 +10,7 @@ body {
   background: url("../Optimized-pexels-nathan-tran-16776159.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-origin: content-box;
   transition: background 0.3s ease;
   // background-attachment: fixed;
 }
@@ -100,4 +101,14 @@ body {
   .container {
     overflow: hidden;
   }
+}
+
+.error--window {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  height: 10em;
+  font-family: Machel;
+  font-size: 2em;
+  letter-spacing: 0.1em;
 }
