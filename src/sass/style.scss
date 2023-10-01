@@ -7,12 +7,26 @@
 }
 
 body {
-  background: url("../Optimized-pexels-nathan-tran-16776159.jpg");
-  background-repeat: no-repeat;
+  background: url(../Optimized-pexels-nathan-tran-16776159.jpg);
+  transition: all 0.5s ease;
   background-size: cover;
-  background-origin: content-box;
-  transition: background 0.3s ease;
-  // background-attachment: fixed;
+  animation: gradient 20s ease infinite;
+  // background-size: 100% 100%;
+  background-attachment: fixed;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 45%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .container {
@@ -32,24 +46,8 @@ body {
     position: absolute;
     left: 1%;
     top: 1%;
+    font-family: "yemila";
   }
-  // .btn {
-  //   backdrop-filter: blur(10px) brightness(1.2);
-  //   cursor: pointer;
-  //   color: #fff;
-  //   text-shadow: 2px 5px 4px #000;
-  //   text-indent: 0;
-  //   background: #fff3;
-  //   border: 1px solid #ffffff79;
-  //   border-radius: 0.65em;
-  //   width: 7em;
-  //   height: 2.5em;
-  //   font-family: Yemila;
-  //   font-size: 1.1em;
-  //   position: relative;
-  //   box-shadow: 1px 1px 10px #000;
-  //   transition: 0.2s ease-in-out;
-  // }
 
   .hidden {
     display: none;

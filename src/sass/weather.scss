@@ -77,7 +77,7 @@
 
     .temp--text {
       position: absolute;
-      font-family: Machel;
+      font-family: "Machel";
       font-size: 2.2em;
       transition: 1s ease;
       text-shadow: 3px 2px 3px black;
@@ -103,7 +103,7 @@
     .temperature--toggle {
       position: absolute;
       top: 0;
-      right: 0%;
+      right: -14%;
       font-family: wonderful future;
       font-size: 1.1em;
 
@@ -164,13 +164,16 @@
 
   .forecasts--days {
     -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     color: #fff;
-    background: linear-gradient(117deg, #201e1e6b, #000000d1);
-    border: 1px solid #ffffff6f;
-    border-radius: 0.6em;
+    background: linear-gradient(117deg, #201e1e6b, #0000003e);
+    border: 1px solid #ffffff3b;
+    border-top-right-radius: 5em;
+    border-bottom-right-radius: 5em;
+    border-bottom-left-radius: 1em;
+    text-wrap: nowrap;
     flex-flow: column wrap;
-    font-family: yemila;
+    font-family: "yemila";
     transition: all 0.2s ease-in-out;
     display: flex;
     cursor: pointer;
@@ -222,5 +225,12 @@
   }
   .weather--image {
     width: 12.5em;
+  }
+  .forecasts--days {
+    width: 12em;
+  }
+  .temperature--toggle {
+    display: flex;
+    gap: 0.3em;
   }
 }
