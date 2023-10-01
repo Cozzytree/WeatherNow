@@ -22,9 +22,9 @@ export const API_Call = async function () {
 
     const { latitude, longitude } = position.coords;
 
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=5fc1bf037a934e1286533936232608&q=${latitude},${longitude}&days=3&aqi=no&alerts=no`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=5fc1bf037a934e1286533936232608&q=${latitude},${longitude}&days=3&aqi=no&alerts=no`;
 
-    const res = await Promise.race([fetch(apiUrl), timeout(100000)]);
+    const res = await Promise.race([fetch(apiUrl), timeout(20000)]);
 
     const data = await res.json();
 
